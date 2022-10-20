@@ -5,6 +5,7 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\pieroxcController;
 use App\Http\Controllers\oficinasController;
+use App\Http\Controllers\PedidosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +16,9 @@ use App\Http\Controllers\oficinasController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/Pedidos' , 
+[pedidoscontroller::class, 'listar']
+);
 
 Route::get('/', function () {
     return view('welcome');
